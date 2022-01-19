@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ItemController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -32,3 +33,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/about', function() {
     return view('about');
 });
+
+Route::prefix('admin/item')
+       ->namespace('Admin')
+       ->group(function() {
+            Route::get('/', [ItemController::class, 'index']);
+       });
