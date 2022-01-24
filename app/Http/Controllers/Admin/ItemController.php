@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Item;
 
 class ItemController extends Controller
 {
@@ -17,9 +18,11 @@ class ItemController extends Controller
         return view('admin.item.create');
     }
 
-    public function add()
+    public function add(Request $request)
     {
-        //INSERT
+        $posts = $request->all();
+        // dd($posts);
+        Item::create($posts);
         return redirect()->route('admin.item.index');
     }
 
