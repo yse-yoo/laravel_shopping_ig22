@@ -39,4 +39,5 @@ Route::prefix('admin/item')
        ->group(function() {
             Route::get('/', [ItemController::class, 'index'])->name('admin.item.index');
             Route::get('/create', [ItemController::class, 'create'])->name('admin.item.create');
+            Route::post('/add', [ItemController::class, 'add'])->name('admin.item.add');
        });

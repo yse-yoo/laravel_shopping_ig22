@@ -16,4 +16,10 @@ class ItemController extends Controller
     {
         return view('admin.item.create');
     }
+
+    public function add()
+    {
+        return redirect()->route('admin.item.index');
+    }
+
 }
