@@ -38,4 +38,5 @@ Route::prefix('admin/item')
        ->namespace('Admin')
        ->group(function() {
             Route::get('/', [ItemController::class, 'index'])->name('admin.item.index');
+            Route::get('/create', [ItemController::class, 'create'])->name('admin.item.create');
        });
