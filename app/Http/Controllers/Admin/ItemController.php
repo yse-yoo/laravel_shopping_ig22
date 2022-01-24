@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Item;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -18,8 +17,9 @@ class ItemController extends Controller
         return view('admin.item.create');
     }
 
-    public function add(Request $request)
+    public function add()
     {
+        //INSERT
         return redirect()->route('admin.item.index');
     }
 
