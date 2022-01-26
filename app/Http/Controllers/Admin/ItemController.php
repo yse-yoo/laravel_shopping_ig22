@@ -23,7 +23,6 @@ class ItemController extends Controller
     public function add(Request $request)
     {
         $posts = $request->all();
-        // dd($posts);
         Item::create($posts);
         return redirect()->route('admin.item.index');
     }
@@ -33,5 +32,12 @@ class ItemController extends Controller
         $item = Item::find($id);
         $data = ['item' => $item];
         return view('admin.item.edit', $data);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $posts = $request->all();
+        Item::find($id)->update($posts);
+        return redirect()->route('admin.item.index');
     }
 }
