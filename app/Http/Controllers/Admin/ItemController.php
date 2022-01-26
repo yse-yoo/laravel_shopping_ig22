@@ -30,6 +30,9 @@ class ItemController extends Controller
 
     public function edit(Request $request, $id)
     {
+        $item = Item::find($id);
+        dd($item);
+
         return view('admin.item.edit');
     }
 }
