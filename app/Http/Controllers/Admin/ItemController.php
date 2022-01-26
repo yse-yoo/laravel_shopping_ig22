@@ -10,7 +10,9 @@ class ItemController extends Controller
 {
     public function index()
     {
-        return view('admin.item.index');
+        $items = Item::get();
+        $data = ['items' => $items];
+        return view('admin.item.index', $data);
     }
 
     public function create()
