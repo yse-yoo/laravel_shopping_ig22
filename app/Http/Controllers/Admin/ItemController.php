@@ -28,4 +28,8 @@ class ItemController extends Controller
         return redirect()->route('admin.item.index');
     }
 
+    public function edit(Request $request, $id)
+    {
+        return view('admin.item.edit');
+    }
 }

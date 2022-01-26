@@ -40,4 +40,6 @@ Route::prefix('admin/item')
             Route::get('/', [ItemController::class, 'index'])->name('admin.item.index');
             Route::get('/create', [ItemController::class, 'create'])->name('admin.item.create');
             Route::post('/add', [ItemController::class, 'add'])->name('admin.item.add');
+            //商品編集のリンク id 指定
+            Route::get('/edit/{id}', [ItemController::class, 'edit'])->name('admin.item.edit');
        });
