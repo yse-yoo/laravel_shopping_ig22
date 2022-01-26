@@ -11,7 +11,11 @@
     @if($items)
     @foreach($items as $item)
     <tr>
-        <td></td>
+        <td>
+            <a href="{{ route('admin.item.edit', $item->id) }}">
+                {{ __('Edit') }}
+            </a>
+        </td>
         <td>{{ $item->name }}</td>
         <td>{{ $item->code }}</td>
         <td>{{ $item->price }}</td>
