@@ -1,5 +1,5 @@
 <h2>商品入力</h2>
-<form action="{{ route('admin.item.add') }}" method="post">
+<form action="{{ route('admin.item.update', $item->id) }}" method="post">
     @csrf
 
     <div>
@@ -14,7 +14,6 @@
         <label for="">{{ __('Price') }}</label>
         <input type="text" name="price" value="{{ $item->price }}">
     </div>
-
     <div>
         <label for="">{{ __('Stock') }}</label>
         <input type="text" name="stock" value="{{ $item->stock }}">

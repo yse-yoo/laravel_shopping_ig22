@@ -42,4 +42,6 @@ Route::prefix('admin/item')
             Route::post('/add', [ItemController::class, 'add'])->name('admin.item.add');
             //商品編集のリンク id 指定
             Route::get('/edit/{id}', [ItemController::class, 'edit'])->name('admin.item.edit');
+            //商品データ Update
+            Route::post('/update/{id}', [ItemController::class, 'update'])->name('admin.item.update');
        });
