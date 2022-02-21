@@ -44,4 +44,6 @@ Route::prefix('admin/item')
             Route::get('/edit/{id}', [ItemController::class, 'edit'])->name('admin.item.edit');
             //商品データ Update
             Route::post('/update/{id}', [ItemController::class, 'update'])->name('admin.item.update');
+            //商品の削除
+            Route::post('/delete/{id}', [ItemController::class, 'delete'])->name('admin.item.delete');
        });

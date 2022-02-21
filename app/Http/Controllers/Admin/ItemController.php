@@ -40,4 +40,9 @@ class ItemController extends Controller
         Item::find($id)->update($posts);
         return redirect()->route('admin.item.index');
     }
+
+    public function delete(Request $request, $id)
+    {
+        return redirect()->route('admin.item.index');
+    }
 }

@@ -22,3 +22,9 @@
     <button>{{ __('Update') }}</button>
     <a href="{{ route('admin.item.index') }}">{{ __('Back') }}</a>
 </form>
+
+<form action="{{ route('admin.item.delete', $item->id) }}" method="post">
+    @csrf
+
+    <button>{{ __('Delete')}}</button>
+</form>
