@@ -1,4 +1,4 @@
-<h2>商品入力</h2>
+<h2>{{ __('Item List') }}</h2>
 <form action="{{ route('admin.item.update', $item->id) }}" method="post">
     @csrf
 
